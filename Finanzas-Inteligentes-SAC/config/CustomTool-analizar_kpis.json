@@ -1,0 +1,8 @@
+{
+  "name": "analizar_kpis",
+  "description": "Calcula indicadores financieros (margen neto, eficiencia operativa, estado de morosidad y nivel de alerta) a partir de las cifras de un reporte de sucursal. Parametros: sucursal (texto), ingresos, gastos, utilidad_neta (soles) y morosidad (porcentaje). Usar para evaluar objetivamente cada reporte.",
+  "color": "linear-gradient(rgb(45,167,110), rgb(30,120,80))",
+  "iconSrc": "",
+  "schema": "z.object({\n  sucursal: z.string(),\n  ingresos: z.number(),\n  gastos: z.number(),\n  utilidad_neta: z.number(),\n  morosidad: z.number()\n})",
+  "func": "const ingresos = Number($ingresos);\nconst gastos = Number($gastos);\nconst utilidad = Number($utilidad_neta);\nconst morosidad = Number($morosidad);\n\nconst margenNeto = ingresos ? (utilidad / ingresos) * 100 : 0;\nconst eficiencia = ingresos ? (gastos / ingresos) * 100 : 0;\n\nlet estado, alerta;\nif (morosidad < 5) { estado = 'Saludable'; alerta = 'verde'; }\nelse if (morosidad <= 7) { estado = 'En observacion'; alerta = 'amarillo'; }\nelse { estado = 'Critica'; alerta = 'rojo'; }\n\nconst resultado = {\n  sucursal: $sucursal,\n  margen_neto_pct: Number(margenNeto.toFixed(1)),\n  eficiencia_operativa_pct: Number(eficiencia.toFixed(1)),\n  indice_morosidad_pct: morosidad,\n  estado_morosidad: estado,\n  nivel_alerta: alerta\n};\nreturn JSON.stringify(resultado);"
+}

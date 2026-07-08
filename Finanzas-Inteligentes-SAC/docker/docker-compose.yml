@@ -1,0 +1,23 @@
+services:
+  flowise:
+    image: flowiseai/flowise:latest
+    container_name: flowise-finbot
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      # NOTA: Flowise 3.x usa cuentas (no usuario/clave por variables).
+      # La primera vez se registra una cuenta en la UI. En este proyecto ya se
+      # creo una:  email = admin@finbot.local   password = Admin123!
+      # Ruta interna donde Flowise guarda flujos, credenciales y BD.
+      - DATABASE_PATH=/root/.flowise
+      - APIKEY_PATH=/root/.flowise
+      - LOG_PATH=/root/.flowise/logs
+      - SECRETKEY_PATH=/root/.flowise
+    volumes:
+      # Persistencia: los flujos y credenciales sobreviven a reinicios.
+      - flowise_finbot_data:/root/.flowise
+
+volumes:
+  flowise_finbot_data:
