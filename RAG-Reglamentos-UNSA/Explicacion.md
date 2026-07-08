@@ -110,3 +110,37 @@ Toma la pregunta, recupera los fragmentos relevantes y genera una respuesta fund
 **Idea central del RAG:** en vez de que el LLM responda "de memoria" (y alucine), primero se
 **Recupera** (Retrieval) el fragmento correcto del reglamento y luego se **Genera** (Generation) la
 respuesta a partir de ese fragmento. Por eso las respuestas quedan ancladas al documento oficial.
+
+---
+
+# Tecnologías aplicadas y para qué sirvieron
+
+En esta actividad se combinaron varias tecnologías. La siguiente tabla resume **qué es cada una** y
+**para qué sirvió** concretamente en el desarrollo del sistema RAG.
+
+| Tecnología | Qué es | Para qué sirvió en esta actividad |
+|---|---|---|
+| **Flowise 3.1.2** | Plataforma *low-code* para construir aplicaciones de IA/LLM conectando nodos de forma visual (sin programar). | Fue el **entorno principal**: en su lienzo se armó todo el flujo RAG arrastrando y conectando los 7–8 nodos, sin escribir código. |
+| **Docker (Docker Desktop + WSL2)** | Tecnología de contenedores que empaqueta una aplicación con todo lo que necesita para ejecutarse de forma aislada y reproducible. | Sirvió para **ejecutar Flowise** en el equipo (Windows 10) de manera aislada y estable, con persistencia de datos mediante un volumen. |
+| **Google Gemini — `gemini-2.5-flash`** | Modelo de lenguaje grande (LLM) de Google. | Es el **"cerebro" que redacta las respuestas** en lenguaje natural a partir del contexto recuperado (Temperature 0.2 para precisión). |
+| **Google Gemini — `gemini-embedding-001`** | Modelo de *embeddings* de Google (texto → vectores). | **Vectorizó** los fragmentos del reglamento y las preguntas, permitiendo la **búsqueda por significado** (Task Type `RETRIEVAL_DOCUMENT`). |
+| **RAG (Retrieval-Augmented Generation)** | Técnica que combina un buscador documental con un LLM: primero recupera información y luego genera la respuesta con ella. | Es la **arquitectura central** del proyecto. Permitió responder sobre los reglamentos con respuestas fundamentadas y **menor alucinación**. |
+| **Vector Store (In-Memory)** | Base de datos que almacena vectores y busca por similitud. | Guardó el **índice** de los fragmentos y devolvió los más relevantes (Top K) a cada consulta. |
+| **LangChain** | Framework de software para construir aplicaciones con LLMs y agentes; Flowise lo usa **por debajo**. | Es el **motor interno** que ejecuta cada nodo (loaders, splitters, cadenas QA). No se programó directamente, pero es la base sobre la que corre Flowise. |
+| **Buffer Memory** | Componente de memoria conversacional de corto plazo. | Dio al agente **memoria del diálogo** para entender preguntas de seguimiento (uno de los temas de la guía). |
+| **PDF (documentos oficiales UNSA)** | Formato de los reglamentos institucionales. | Fue la **fuente de datos (base de conocimiento)** que alimentó el sistema: el Reglamento Disciplinario y el de Auspicios. |
+| **Draw.io** | Herramienta de diagramación. | Se usó para elaborar el **diagrama de arquitectura** del pipeline RAG para el informe. |
+| **Python 3.12 + PyPDF2** | Lenguaje de programación y librería de lectura de PDF. | Apoyo puntual: **verificar** que los PDF tuvieran texto extraíble (no escaneado) y **comprobar** los artículos de las respuestas esperadas. |
+
+## Cómo encajan entre sí
+
+- **Docker** aloja a **Flowise**, que es donde se diseña todo visualmente.
+- Dentro de Flowise, **LangChain** ejecuta los nodos que implementan la técnica **RAG**.
+- El RAG usa a **Google Gemini** en sus dos roles: *embeddings* (para buscar) y *chat* (para
+  responder), apoyándose en un **Vector Store** y en la **Buffer Memory**.
+- Los **PDF oficiales** son el conocimiento; **Draw.io** y **Python** fueron herramientas de apoyo
+  para documentar y verificar.
+
+> En conjunto, estas tecnologías permitieron cumplir el objetivo de la práctica: **implementar un
+> agente de IA con memoria y recuperación de información (RAG)** que responde consultas en lenguaje
+> natural sobre normativa institucional, de forma fundamentada y con trazabilidad de la fuente.
