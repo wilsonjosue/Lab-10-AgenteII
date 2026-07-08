@@ -1,61 +1,59 @@
-# Batería de pruebas — Sistema RAG Reglamentos UNSA
+# Batería de pruebas — Sistema RAG Reglamento Disciplinario UNSA
 
-12 consultas en lenguaje natural (11 de contenido + 1 de control; ≥10 exigidas). Los **tres
-documentos son de temas distintos** (disciplina, posgrado, auspicios) para que la recuperación no
-se confunda entre reglamentos que se solapan. Respuestas **verificadas contra el texto real** de los
-PDF (número de artículo incluido). Ejecutar cada consulta en el chat, pegar la respuesta real y
-marcar el veredicto. Capturas en `../evidencias/`.
+12 consultas en lenguaje natural (11 de contenido + 1 de control; ≥10 exigidas por la guía), todas
+sobre el **Reglamento del Procedimiento Administrativo Disciplinario para Estudiantes de la UNSA**
+(RCU 0515-2020, 26 páginas). Cada respuesta esperada fue **verificada contra el texto real del PDF**
+(con su artículo). Ejecutar cada consulta en el chat, pegar la respuesta real y marcar el veredicto.
+Capturas en `../evidencias/`.
 
 > **Tip:** prueba cada pregunta en una **sesión de chat nueva** (icono de bote de basura) para que el
 > historial no reformule la consulta. La pregunta 12 es de control: debe reconocer que la info no está.
 
 ---
 
-### Doc 1 — Reglamento del Procedimiento Administrativo Disciplinario para Estudiantes (RCU 0515-2020)
+**1. ¿Cuál es la finalidad del Reglamento del Procedimiento Administrativo Disciplinario?**
+*Esperado (Art. 1):* establecer el Procedimiento Administrativo Disciplinario al que obligatoriamente
+se ceñirán las autoridades para aplicar sanciones a los estudiantes que incurran en faltas.
 
-**1. ¿Cuáles son los tipos de sanciones que se pueden imponer a un estudiante?**
-*Esperado (Art. 12):* a) Amonestación escrita, b) Suspensión por un (01) semestre académico,
-c) Separación por dos (02) semestres académicos, d) Separación definitiva.
+**2. ¿A quiénes se aplica el reglamento disciplinario?**
+*Esperado (Art. 4 — Ámbito de aplicación):* a las inconductas cometidas por los **estudiantes
+matriculados** en las diferentes Facultades de la UNSA.
 
-**2. ¿Qué conductas se consideran faltas muy graves y qué sanción pueden acarrear?**
-*Esperado (Art. 99, inc. c):* p. ej. la reiteración de faltas ya sancionadas con suspensión, la
-violencia grave contra un miembro de la comunidad universitaria, etc.; **pueden ser causal de
-separación definitiva**.
+**3. ¿Cuáles son los tipos de sanciones que se pueden imponer a un estudiante?**
+*Esperado (Art. 12):* a) **Amonestación escrita**, b) **Suspensión por un (01) semestre académico**,
+c) **Separación por dos (02) semestres académicos**, d) **Separación definitiva**.
 
-**3. ¿En qué plazo prescribe el procedimiento administrativo disciplinario contra un estudiante?**
-*Esperado:* en el plazo de **tres (3) años** contados desde que la autoridad toma conocimiento de los hechos.
+**4. ¿Qué inconductas se consideran faltas leves?**
+*Esperado (Art. 99, inc. a):* p. ej. la inobservancia de las normas y directivas generales de la
+Universidad, la inasistencia injustificada a actividades, etc.
 
-**4. ¿En qué consiste la etapa de preinstrucción del procedimiento disciplinario?**
-*Esperado (Art. 40):* etapa que **se inicia al tomar conocimiento** de la supuesta comisión de una
-falta, de oficio o a pedido de parte.
+**5. Dame un ejemplo de falta grave según el reglamento.**
+*Esperado (Art. 99, inc. b):* p. ej. **ingresar a la Universidad portando drogas, bebidas alcohólicas
+o armas de fuego**, o consumirlas.
 
-### Doc 2 — Reglamento del Régimen Académico (RCU 0104-2022) — posgrado
+**6. ¿Qué conductas constituyen faltas muy graves y qué sanción pueden acarrear?**
+*Esperado (Art. 99, inc. c):* la reiteración de faltas ya suspendidas, la **violencia grave** contra
+miembros de la comunidad, apropiación consumada, etc.; pueden ser **causal de separación definitiva**.
 
-**5. ¿Cuántos créditos mínimos requiere la Maestría de Especialización?**
-*Esperado:* dos (2) semestres con un mínimo de **cuarenta y ocho (48) créditos** + dominio de un idioma extranjero.
+**7. ¿Qué órganos intervienen en el procedimiento administrativo disciplinario?**
+*Esperado:* el **Órgano Instructor**, el **Órgano Sancionador** y el **Órgano Revisor**.
 
-**6. ¿Cuántos créditos mínimos requiere el doctorado?**
-*Esperado:* mínimo **sesenta y cuatro (64) créditos** + dominio de **dos (2) idiomas extranjeros**.
+**8. ¿Qué derechos tiene el estudiante investigado durante el procedimiento?**
+*Esperado:* debido procedimiento y **derecho de defensa**: derecho a la **notificación**, de **acceso
+al expediente**, entre otros.
 
-**7. ¿Cuál es la nota aprobatoria en los estudios de posgrado?**
-*Esperado:* sistema vigesimal, nota aprobatoria **catorce (14)**.
+**9. ¿En qué plazo prescribe el procedimiento administrativo disciplinario?**
+*Esperado:* en el plazo de **tres (3) años** contados a partir de que la autoridad toma conocimiento
+de los hechos.
 
-**8. ¿A través de qué unidad se realizan los diplomados, maestrías y doctorados?**
-*Esperado:* a través de la **Escuela de Posgrado** de la Universidad.
+**10. ¿Qué circunstancias atenuantes se consideran al aplicar una sanción?**
+*Esperado (Art. 15):* la **carencia de sanciones previas**, la actuación por móviles supuestamente
+altruistas, entre otras.
 
-### Doc 3 — Reglamento de Auspicios (RCU 0516-2020)
+**11. ¿En qué plazo puede el estudiante presentar el recurso de apelación?**
+*Esperado:* dentro del plazo legal de **quince (15) días hábiles**.
 
-**9. ¿Cuál es la finalidad del Reglamento de Auspicios de la UNSA?**
-*Esperado (Art. 1):* normar el otorgamiento de **auspicios académicos, científicos, culturales y artísticos** de la Universidad.
-
-**10. ¿Qué se entiende por "auspicio" según el reglamento?**
-*Esperado (Art. 6):* el **aval o respaldo institucional** que otorga la Universidad.
-
-**11. ¿Qué tipo de instituciones pueden solicitar un auspicio a la UNSA?**
-*Esperado (Art. 1):* instituciones homólogas, colegios profesionales, sociedades científicas, centros
-culturales, instituciones educativas, empresas privadas y públicas y otras con personería jurídica.
-
-### Control (fuera de los documentos)
+### Control (fuera del documento)
 
 **12. ¿Cuál es el horario de atención de la biblioteca central de la UNSA?**
 *Esperado:* debe responder que **no encuentra esa información en los reglamentos proporcionados**.
@@ -64,19 +62,19 @@ culturales, instituciones educativas, empresas privadas y públicas y otras con 
 
 ## Tabla de resultados (llenar tras ejecutar)
 
-| # | Consulta | Doc | Respuesta correcta | Citó fuente | Veredicto |
-|---|---|---|---|---|---|
-| 1 | Tipos de sanciones (Art. 12) | 1 | ⬜ | ⬜ | |
-| 2 | Faltas muy graves → separación definitiva | 1 | ⬜ | ⬜ | |
-| 3 | Prescripción del procedimiento (3 años) | 1 | ⬜ | ⬜ | |
-| 4 | Etapa de preinstrucción (Art. 40) | 1 | ⬜ | ⬜ | |
-| 5 | Créditos de maestría (48) | 2 | ⬜ | ⬜ | |
-| 6 | Créditos de doctorado (64 + 2 idiomas) | 2 | ⬜ | ⬜ | |
-| 7 | Nota aprobatoria posgrado (14) | 2 | ⬜ | ⬜ | |
-| 8 | Diplomados/maestrías/doctorados → Escuela de Posgrado | 2 | ⬜ | ⬜ | |
-| 9 | Finalidad de auspicios (Art. 1) | 3 | ⬜ | ⬜ | |
-| 10 | Definición de auspicio (Art. 6) | 3 | ⬜ | ⬜ | |
-| 11 | Quiénes solicitan auspicio | 3 | ⬜ | ⬜ | |
-| 12 | Control (fuera de alcance) | — | ⬜ | — | |
+| # | Consulta | Respuesta correcta | Citó fuente | Veredicto |
+|---|---|---|---|---|
+| 1 | Finalidad del reglamento (Art. 1) | bien | ⬜ | |
+| 2 | Ámbito de aplicación (Art. 4) | bien | ⬜ | |
+| 3 | Tipos de sanciones (Art. 12) | ⬜ | mal | |
+| 4 | Faltas leves (Art. 99.a) | ⬜ | mal | |
+| 5 | Ejemplo de falta grave (Art. 99.b) | si | ⬜ | |
+| 6 | Faltas muy graves → separación definitiva (Art. 99.c) | si | ⬜ | |
+| 7 | Órganos: Instructor/Sancionador/Revisor | si | ⬜ | |
+| 8 | Derechos del investigado (defensa, notificación) | si | ⬜ | |
+| 9 | Prescripción: 3 años | si | ⬜ | |
+| 10 | Atenuantes (Art. 15) | ⬜ | no | |
+| 11 | Apelación: 15 días hábiles | si | ⬜ | |
+| 12 | Control (fuera de alcance) | si | — | |
 
 **Precisión global: ____ / 12**
