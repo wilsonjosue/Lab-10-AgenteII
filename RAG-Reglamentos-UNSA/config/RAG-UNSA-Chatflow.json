@@ -88,7 +88,7 @@
           "textSplitter": "",
           "usage": "perPage",
           "legacyBuild": "",
-          "metadata": "{\"documento\": \"Reglamento de Grados y Titulos\"}",
+          "metadata": "{\"documento\": \"Reglamento Disciplinario de Estudiantes\"}",
           "omitMetadataKeys": ""
         },
         "selected": false,
@@ -424,7 +424,7 @@
         ],
         "inputAnchors": [],
         "inputs": {
-          "chunkSize": 1500,
+          "chunkSize": 1000,
           "chunkOverlap": 200,
           "separators": ""
         },
@@ -507,7 +507,7 @@
                 "name": "CLUSTERING"
               }
             ],
-            "default": "TASK_TYPE_UNSPECIFIED"
+            "default": "SEMANTIC_SIMILARITY"
           },
           {
             "label": "Strip New Lines",
@@ -531,7 +531,7 @@
         "inputAnchors": [],
         "inputs": {
           "modelName": "gemini-embedding-001",
-          "tasktype": "TASK_TYPE_UNSPECIFIED",
+          "tasktype": "RETRIEVAL_DOCUMENT",
           "stripNewLines": true
         },
         "selected": false,
@@ -604,7 +604,7 @@
         "inputs": {
           "document": "",
           "embeddings": "",
-          "topK": 4
+          "topK": 20
         },
         "selected": false,
         "outputAnchors": [
@@ -672,7 +672,7 @@
             "name": "modelName",
             "type": "asyncOptions",
             "loadMethod": "listModels",
-            "default": "gemini-1.5-flash-latest"
+            "default": "gemini-2.5-flash"
           },
           {
             "label": "Custom Model Name",
@@ -1065,7 +1065,7 @@
           "memory": "",
           "returnSourceDocuments": true,
           "rephrasePrompt": "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.\n\nChat History:\n{chat_history}\nFollow Up Input: {question}\nStandalone Question:",
-          "responsePrompt": "Eres \"AsistenteUNSA\", asistente que responde consultas sobre los reglamentos oficiales de la Universidad Nacional de San Agustin de Arequipa (UNSA) usando UNICAMENTE el contexto proporcionado.\n\nContexto:\n{context}\n\nInstrucciones:\n- Responde en espanol, claro y preciso, y CITA el articulo o el documento cuando sea posible.\n- Usa SOLO la informacion del contexto. Si la respuesta no esta en el contexto, responde exactamente: \"No encuentro esa informacion en los reglamentos proporcionados.\"\n- No inventes ni uses conocimiento externo.",
+          "responsePrompt": "Eres \"AsistenteUNSA\", un asistente experto en los reglamentos oficiales de la Universidad Nacional de San Agustin de Arequipa (UNSA). Respondes consultas de estudiantes basandote UNICAMENTE en el contexto proporcionado, que son fragmentos recuperados de los reglamentos.\n\nContexto (fragmentos de los reglamentos):\n{context}\n\nComo responder:\n1. Lee TODOS los fragmentos del contexto antes de contestar. Cada fragmento indica de que \"documento\" proviene y suele incluir el numero de articulo.\n2. Identifica el fragmento que responde la pregunta y responde en espanol de forma DIRECTA y concreta: primero el dato puntual, luego una breve explicacion.\n3. CITA SIEMPRE la fuente al final, entre parentesis, con el documento y el articulo. Formato: \"(Reglamento de Auspicios, Art. 6)\".\n4. Si el contexto tiene informacion parcial o relacionada, usala para responder lo mejor posible; NO te rindas con un \"no encuentro\" si hay algo pertinente en el contexto.\n5. Responde exactamente \"No encuentro esa informacion en los reglamentos proporcionados.\" SOLO si ningun fragmento tiene relacion con la pregunta.\n6. Nunca inventes articulos, cifras ni datos que no esten en el contexto.\n\nEjemplos del formato esperado:\n- Pregunta: \"Cuanto dura la sancion de suspension a un estudiante?\" Respuesta: \"La suspension es por un (01) semestre academico. (Reglamento Disciplinario de Estudiantes, Art. 12)\"\n- Pregunta: \"Cual es el horario de la biblioteca central?\" Respuesta: \"No encuentro esa informacion en los reglamentos proporcionados.\"",
           "inputModeration": ""
         },
         "selected": false,
