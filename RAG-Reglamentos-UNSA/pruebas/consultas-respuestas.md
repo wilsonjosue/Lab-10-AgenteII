@@ -78,3 +78,32 @@ altruistas, entre otras.
 | 12 | Control (fuera de alcance) | si | — | |
 
 **Precisión global: ____ / 12**
+
+---
+
+## Documento 2 — Reglamento de Auspicios (RCU 0516-2020) — consultas adicionales
+
+Al añadir el segundo documento (tema distinto: patrocinios institucionales), se agregan estas
+consultas para evidenciar que el sistema distingue bien entre ambos reglamentos. Verificadas contra
+el texto real del PDF.
+
+**13. ¿Cuál es la finalidad del Reglamento de Auspicios de la UNSA?**
+*Esperado (Art. 1):* normar el otorgamiento de **auspicios académicos, científicos, culturales y
+artísticos** de la Universidad.
+
+**14. ¿Qué se entiende por "auspicio" según el reglamento?**
+*Esperado (Art. 6):* el **aval o respaldo institucional** que otorga la Universidad.
+
+**15. ¿Qué tipo de instituciones pueden solicitar un auspicio a la UNSA?**
+*Esperado (Art. 1):* instituciones homólogas, colegios profesionales, sociedades científicas, centros
+culturales, instituciones educativas, empresas privadas y públicas y otras con personería jurídica.
+
+| # | Consulta | Doc | Respuesta correcta | Citó fuente | Veredicto |
+|---|---|---|---|---|---|
+| 13 | Finalidad de auspicios (Art. 1) | Auspicios | ⬜ | ⬜ | |
+| 14 | Definición de auspicio (Art. 6) | Auspicios | ⬜ | ⬜ | |
+| 15 | Instituciones que solicitan auspicio | Auspicios | ⬜ | ⬜ | |
+
+> **Prueba cruzada recomendada:** haz la pregunta 3 (sanciones, Doc 1) y la 13 (auspicios, Doc 2) en
+> sesiones nuevas y confirma que cada una cita el **documento correcto**. Eso demuestra que los dos
+> reglamentos conviven sin confundirse.

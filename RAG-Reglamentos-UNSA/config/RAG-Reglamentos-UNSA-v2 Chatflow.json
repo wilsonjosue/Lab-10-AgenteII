@@ -3,16 +3,16 @@
     {
       "id": "pdfFile_0",
       "position": {
-        "x": 40,
-        "y": 40
+        "x": 134.20089955022493,
+        "y": -114.7586206896552
       },
       "type": "customNode",
       "width": 300,
-      "height": 500,
+      "height": 541,
       "selected": false,
       "positionAbsolute": {
-        "x": 40,
-        "y": 40
+        "x": 134.20089955022493,
+        "y": -114.7586206896552
       },
       "data": {
         "id": "pdfFile_0",
@@ -84,14 +84,12 @@
           }
         ],
         "inputs": {
-          "pdfFile": "",
-          "textSplitter": "",
+          "textSplitter": "{{recursiveCharacterTextSplitter_0.data.instance}}",
           "usage": "perPage",
           "legacyBuild": "",
           "metadata": "{\"documento\": \"Reglamento Disciplinario de Estudiantes\"}",
           "omitMetadataKeys": ""
         },
-        "selected": false,
         "outputAnchors": [
           {
             "name": "output",
@@ -119,144 +117,24 @@
         ],
         "outputs": {
           "output": "document"
-        }
-      }
-    },
-    {
-      "id": "pdfFile_1",
-      "position": {
-        "x": 40,
-        "y": 340
-      },
-      "type": "customNode",
-      "width": 300,
-      "height": 500,
-      "selected": false,
-      "positionAbsolute": {
-        "x": 40,
-        "y": 340
-      },
-      "data": {
-        "id": "pdfFile_1",
-        "label": "Pdf File",
-        "version": 2,
-        "name": "pdfFile",
-        "type": "Document",
-        "baseClasses": [
-          "Document"
-        ],
-        "category": "Document Loaders",
-        "description": "Load data from PDF files",
-        "inputParams": [
-          {
-            "label": "Pdf File",
-            "name": "pdfFile",
-            "type": "file",
-            "fileType": ".pdf"
-          },
-          {
-            "label": "Usage",
-            "name": "usage",
-            "type": "options",
-            "options": [
-              {
-                "label": "One document per page",
-                "name": "perPage"
-              },
-              {
-                "label": "One document per file",
-                "name": "perFile"
-              }
-            ],
-            "default": "perPage"
-          },
-          {
-            "label": "Use Legacy Build",
-            "name": "legacyBuild",
-            "type": "boolean",
-            "optional": true,
-            "additionalParams": true
-          },
-          {
-            "label": "Additional Metadata",
-            "name": "metadata",
-            "type": "json",
-            "description": "Additional metadata to be added to the extracted documents",
-            "optional": true,
-            "additionalParams": true
-          },
-          {
-            "label": "Omit Metadata Keys",
-            "name": "omitMetadataKeys",
-            "type": "string",
-            "rows": 4,
-            "description": "Each document loader comes with a default set of metadata keys that are extracted from the document. You can use this field to omit some of the default metadata keys. The value should be a list of keys, seperated by comma. Use * to omit all metadata keys execept the ones you specify in the Additional Metadata field",
-            "placeholder": "key1, key2, key3.nestedKey1",
-            "optional": true,
-            "additionalParams": true
-          }
-        ],
-        "inputAnchors": [
-          {
-            "label": "Text Splitter",
-            "name": "textSplitter",
-            "type": "TextSplitter",
-            "optional": true,
-            "id": "pdfFile_1-input-textSplitter-TextSplitter"
-          }
-        ],
-        "inputs": {
-          "pdfFile": "",
-          "textSplitter": "",
-          "usage": "perPage",
-          "legacyBuild": "",
-          "metadata": "{\"documento\": \"Reglamento de Auspicios\"}",
-          "omitMetadataKeys": ""
         },
-        "selected": false,
-        "outputAnchors": [
-          {
-            "name": "output",
-            "label": "Output",
-            "type": "options",
-            "description": "",
-            "options": [
-              {
-                "id": "pdfFile_1-output-document-Document|json",
-                "name": "document",
-                "label": "Document",
-                "description": "Array of document objects containing metadata and pageContent",
-                "type": "Document | json"
-              },
-              {
-                "id": "pdfFile_1-output-text-string|json",
-                "name": "text",
-                "label": "Text",
-                "description": "Concatenated string from pageContent of documents",
-                "type": "string | json"
-              }
-            ],
-            "default": "document"
-          }
-        ],
-        "outputs": {
-          "output": "document"
-        }
-      }
+        "selected": false
+      },
+      "dragging": false
     },
     {
       "id": "recursiveCharacterTextSplitter_0",
       "position": {
-        "x": 460,
-        "y": 60
+        "x": -477.52323838080963,
+        "y": 58.20569715142403
       },
       "type": "customNode",
       "width": 300,
-      "height": 500,
+      "height": 436,
       "selected": false,
       "positionAbsolute": {
-        "x": 460,
-        "y": 60
+        "x": -477.52323838080963,
+        "y": 58.20569715142403
       },
       "data": {
         "id": "recursiveCharacterTextSplitter_0",
@@ -306,7 +184,6 @@
           "chunkOverlap": 200,
           "separators": ""
         },
-        "selected": false,
         "outputAnchors": [
           {
             "id": "recursiveCharacterTextSplitter_0-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
@@ -316,22 +193,24 @@
             "type": "RecursiveCharacterTextSplitter | TextSplitter | BaseDocumentTransformer | Runnable"
           }
         ],
-        "outputs": {}
-      }
+        "outputs": {},
+        "selected": false
+      },
+      "dragging": false
     },
     {
       "id": "googleGenerativeAiEmbeddings_0",
       "position": {
-        "x": 460,
-        "y": 420
+        "x": 80.95352323838077,
+        "y": 462.61469265367316
       },
       "type": "customNode",
       "width": 300,
-      "height": 500,
+      "height": 526,
       "selected": false,
       "positionAbsolute": {
-        "x": 460,
-        "y": 420
+        "x": 80.95352323838077,
+        "y": 462.61469265367316
       },
       "data": {
         "id": "googleGenerativeAiEmbeddings_0",
@@ -412,7 +291,6 @@
           "tasktype": "RETRIEVAL_DOCUMENT",
           "stripNewLines": true
         },
-        "selected": false,
         "outputAnchors": [
           {
             "id": "googleGenerativeAiEmbeddings_0-output-googleGenerativeAiEmbeddings-GoogleGenerativeAiEmbeddings|GoogleGenerativeAIEmbeddings|Embeddings",
@@ -423,22 +301,23 @@
           }
         ],
         "outputs": {},
-        "credential": ""
-      }
+        "selected": false
+      },
+      "dragging": false
     },
     {
       "id": "memoryVectorStore_0",
       "position": {
-        "x": 860,
-        "y": 180
+        "x": 763.5562218890555,
+        "y": 101.49925037481262
       },
       "type": "customNode",
       "width": 300,
-      "height": 500,
+      "height": 413,
       "selected": false,
       "positionAbsolute": {
-        "x": 860,
-        "y": 180
+        "x": 763.5562218890555,
+        "y": 101.49925037481262
       },
       "data": {
         "id": "memoryVectorStore_0",
@@ -480,11 +359,12 @@
           }
         ],
         "inputs": {
-          "document": "",
-          "embeddings": "",
-          "topK": 30
+          "document": [
+            "{{pdfFile_0.data.instance}}"
+          ],
+          "embeddings": "{{googleGenerativeAiEmbeddings_0.data.instance}}",
+          "topK": 20
         },
-        "selected": false,
         "outputAnchors": [
           {
             "name": "output",
@@ -512,22 +392,24 @@
         ],
         "outputs": {
           "output": "retriever"
-        }
-      }
+        },
+        "selected": false
+      },
+      "dragging": false
     },
     {
       "id": "chatGoogleGenerativeAI_0",
       "position": {
-        "x": 860,
-        "y": 560
+        "x": 767.5919669051681,
+        "y": 534.6169904722892
       },
       "type": "customNode",
       "width": 300,
-      "height": 500,
+      "height": 676,
       "selected": false,
       "positionAbsolute": {
-        "x": 860,
-        "y": 560
+        "x": 767.5919669051681,
+        "y": 534.6169904722892
       },
       "data": {
         "id": "chatGoogleGenerativeAI_0",
@@ -772,7 +654,6 @@
           "safetySettings": "",
           "baseUrl": ""
         },
-        "selected": false,
         "outputAnchors": [
           {
             "id": "chatGoogleGenerativeAI_0-output-chatGoogleGenerativeAI-ChatGoogleGenerativeAI|ChatGoogleGenerativeAI|BaseChatModel|BaseLanguageModel|Runnable",
@@ -783,22 +664,23 @@
           }
         ],
         "outputs": {},
-        "credential": ""
-      }
+        "selected": false
+      },
+      "dragging": false
     },
     {
       "id": "bufferMemory_0",
       "position": {
-        "x": 860,
-        "y": 900
+        "x": 1266.2223527447227,
+        "y": 957.6034972189159
       },
       "type": "customNode",
       "width": 300,
-      "height": 500,
+      "height": 259,
       "selected": false,
       "positionAbsolute": {
-        "x": 860,
-        "y": 900
+        "x": 1266.2223527447227,
+        "y": 957.6034972189159
       },
       "data": {
         "id": "bufferMemory_0",
@@ -836,7 +718,6 @@
           "sessionId": "",
           "memoryKey": "chat_history"
         },
-        "selected": false,
         "outputAnchors": [
           {
             "id": "bufferMemory_0-output-bufferMemory-BufferMemory|BaseChatMemory|BaseMemory",
@@ -846,22 +727,24 @@
             "type": "BufferMemory | BaseChatMemory | BaseMemory"
           }
         ],
-        "outputs": {}
-      }
+        "outputs": {},
+        "selected": false
+      },
+      "dragging": false
     },
     {
       "id": "conversationalRetrievalQAChain_0",
       "position": {
-        "x": 1280,
-        "y": 360
+        "x": 1529.8595444505338,
+        "y": 316.70296809834474
       },
       "type": "customNode",
       "width": 300,
-      "height": 500,
+      "height": 538,
       "selected": false,
       "positionAbsolute": {
-        "x": 1280,
-        "y": 360
+        "x": 1529.8595444505338,
+        "y": 316.70296809834474
       },
       "data": {
         "id": "conversationalRetrievalQAChain_0",
@@ -938,15 +821,14 @@
           }
         ],
         "inputs": {
-          "model": "",
-          "vectorStoreRetriever": "",
-          "memory": "",
+          "model": "{{chatGoogleGenerativeAI_0.data.instance}}",
+          "vectorStoreRetriever": "{{memoryVectorStore_0.data.instance}}",
+          "memory": "{{bufferMemory_0.data.instance}}",
           "returnSourceDocuments": true,
           "rephrasePrompt": "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.\n\nChat History:\n{chat_history}\nFollow Up Input: {question}\nStandalone Question:",
           "responsePrompt": "Eres \"AsistenteUNSA\", un asistente experto en los reglamentos oficiales de la Universidad Nacional de San Agustin de Arequipa (UNSA). Respondes consultas de estudiantes basandote UNICAMENTE en el contexto proporcionado, que son fragmentos recuperados de los reglamentos.\n\nContexto (fragmentos de los reglamentos):\n{context}\n\nComo responder:\n1. Lee TODOS los fragmentos del contexto antes de contestar. Cada fragmento indica de que \"documento\" proviene y suele incluir el numero de articulo.\n2. Identifica el fragmento que responde la pregunta y responde en espanol de forma DIRECTA y concreta: primero el dato puntual, luego una breve explicacion.\n3. CITA SIEMPRE la fuente al final, entre parentesis, con el documento y el articulo. Formato: \"(Reglamento de Auspicios, Art. 6)\".\n4. Si el contexto tiene informacion parcial o relacionada, usala para responder lo mejor posible; NO te rindas con un \"no encuentro\" si hay algo pertinente en el contexto.\n5. Responde exactamente \"No encuentro esa informacion en los reglamentos proporcionados.\" SOLO si ningun fragmento tiene relacion con la pregunta.\n6. Nunca inventes articulos, cifras ni datos que no esten en el contexto.\n\nEjemplos del formato esperado:\n- Pregunta: \"Cuanto dura la sancion de suspension a un estudiante?\" Respuesta: \"La suspension es por un (01) semestre academico. (Reglamento Disciplinario de Estudiantes, Art. 12)\"\n- Pregunta: \"Cual es el horario de la biblioteca central?\" Respuesta: \"No encuentro esa informacion en los reglamentos proporcionados.\"",
           "inputModeration": ""
         },
-        "selected": false,
         "outputAnchors": [
           {
             "id": "conversationalRetrievalQAChain_0-output-conversationalRetrievalQAChain-ConversationalRetrievalQAChain|BaseChain|Runnable",
@@ -956,8 +838,10 @@
             "type": "ConversationalRetrievalQAChain | BaseChain | Runnable"
           }
         ],
-        "outputs": {}
-      }
+        "outputs": {},
+        "selected": false
+      },
+      "dragging": false
     }
   ],
   "edges": [
@@ -967,7 +851,7 @@
       "target": "pdfFile_0",
       "targetHandle": "pdfFile_0-input-textSplitter-TextSplitter",
       "type": "buttonedge",
-      "id": "recursiveCharacterTextSplitter_0-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable-pdfFile_0-pdfFile_0-input-textSplitter-TextSplitter"
+      "id": "recursiveCharacterTextSplitter_0-recursiveCharacterTextSplitter_0-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable-pdfFile_0-pdfFile_0-input-textSplitter-TextSplitter"
     },
     {
       "source": "pdfFile_0",
@@ -975,7 +859,7 @@
       "target": "memoryVectorStore_0",
       "targetHandle": "memoryVectorStore_0-input-document-Document",
       "type": "buttonedge",
-      "id": "pdfFile_0-output-document-Document|json-memoryVectorStore_0-memoryVectorStore_0-input-document-Document"
+      "id": "pdfFile_0-pdfFile_0-output-document-Document|json-memoryVectorStore_0-memoryVectorStore_0-input-document-Document"
     },
     {
       "source": "googleGenerativeAiEmbeddings_0",
@@ -983,15 +867,7 @@
       "target": "memoryVectorStore_0",
       "targetHandle": "memoryVectorStore_0-input-embeddings-Embeddings",
       "type": "buttonedge",
-      "id": "googleGenerativeAiEmbeddings_0-output-googleGenerativeAiEmbeddings-GoogleGenerativeAiEmbeddings|GoogleGenerativeAIEmbeddings|Embeddings-memoryVectorStore_0-memoryVectorStore_0-input-embeddings-Embeddings"
-    },
-    {
-      "source": "memoryVectorStore_0",
-      "sourceHandle": "memoryVectorStore_0-output-retriever-Memory|VectorStoreRetriever|BaseRetriever",
-      "target": "conversationalRetrievalQAChain_0",
-      "targetHandle": "conversationalRetrievalQAChain_0-input-vectorStoreRetriever-BaseRetriever",
-      "type": "buttonedge",
-      "id": "memoryVectorStore_0-output-retriever-Memory|VectorStoreRetriever|BaseRetriever-conversationalRetrievalQAChain_0-conversationalRetrievalQAChain_0-input-vectorStoreRetriever-BaseRetriever"
+      "id": "googleGenerativeAiEmbeddings_0-googleGenerativeAiEmbeddings_0-output-googleGenerativeAiEmbeddings-GoogleGenerativeAiEmbeddings|GoogleGenerativeAIEmbeddings|Embeddings-memoryVectorStore_0-memoryVectorStore_0-input-embeddings-Embeddings"
     },
     {
       "source": "chatGoogleGenerativeAI_0",
@@ -999,7 +875,15 @@
       "target": "conversationalRetrievalQAChain_0",
       "targetHandle": "conversationalRetrievalQAChain_0-input-model-BaseChatModel",
       "type": "buttonedge",
-      "id": "chatGoogleGenerativeAI_0-output-chatGoogleGenerativeAI-ChatGoogleGenerativeAI|ChatGoogleGenerativeAI|BaseChatModel|BaseLanguageModel|Runnable-conversationalRetrievalQAChain_0-conversationalRetrievalQAChain_0-input-model-BaseChatModel"
+      "id": "chatGoogleGenerativeAI_0-chatGoogleGenerativeAI_0-output-chatGoogleGenerativeAI-ChatGoogleGenerativeAI|ChatGoogleGenerativeAI|BaseChatModel|BaseLanguageModel|Runnable-conversationalRetrievalQAChain_0-conversationalRetrievalQAChain_0-input-model-BaseChatModel"
+    },
+    {
+      "source": "memoryVectorStore_0",
+      "sourceHandle": "memoryVectorStore_0-output-retriever-Memory|VectorStoreRetriever|BaseRetriever",
+      "target": "conversationalRetrievalQAChain_0",
+      "targetHandle": "conversationalRetrievalQAChain_0-input-vectorStoreRetriever-BaseRetriever",
+      "type": "buttonedge",
+      "id": "memoryVectorStore_0-memoryVectorStore_0-output-retriever-Memory|VectorStoreRetriever|BaseRetriever-conversationalRetrievalQAChain_0-conversationalRetrievalQAChain_0-input-vectorStoreRetriever-BaseRetriever"
     },
     {
       "source": "bufferMemory_0",
@@ -1007,28 +891,7 @@
       "target": "conversationalRetrievalQAChain_0",
       "targetHandle": "conversationalRetrievalQAChain_0-input-memory-BaseMemory",
       "type": "buttonedge",
-      "id": "bufferMemory_0-output-bufferMemory-BufferMemory|BaseChatMemory|BaseMemory-conversationalRetrievalQAChain_0-conversationalRetrievalQAChain_0-input-memory-BaseMemory"
-    },
-    {
-      "source": "recursiveCharacterTextSplitter_0",
-      "sourceHandle": "recursiveCharacterTextSplitter_0-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
-      "target": "pdfFile_1",
-      "targetHandle": "pdfFile_1-input-textSplitter-TextSplitter",
-      "type": "buttonedge",
-      "id": "recursiveCharacterTextSplitter_0-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable-pdfFile_1-pdfFile_1-input-textSplitter-TextSplitter"
-    },
-    {
-      "source": "pdfFile_1",
-      "sourceHandle": "pdfFile_1-output-document-Document|json",
-      "target": "memoryVectorStore_0",
-      "targetHandle": "memoryVectorStore_0-input-document-Document",
-      "type": "buttonedge",
-      "id": "pdfFile_1-output-document-Document|json-memoryVectorStore_0-memoryVectorStore_0-input-document-Document"
+      "id": "bufferMemory_0-bufferMemory_0-output-bufferMemory-BufferMemory|BaseChatMemory|BaseMemory-conversationalRetrievalQAChain_0-conversationalRetrievalQAChain_0-input-memory-BaseMemory"
     }
-  ],
-  "viewport": {
-    "x": 0,
-    "y": 0,
-    "zoom": 0.6
-  }
+  ]
 }
